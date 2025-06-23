@@ -112,4 +112,6 @@ function Remove-SentinelOne {
 
 }
 
-Remove-SentinelOne -CallC -SiteToken 'eyJ1cmwiOiAiaHR0cHM6Ly91c2VhMS1wYXg4LTAzLnNlbnRpbmVsb25lLm5ldCIsICJzaXRlX2tleSI6ICI2MmJjY2I0NGUxOGI2ZDc5In0='
+Write-Host "Calling S1 cleaner with token: $($env:SITETOKEN)"
+
+Remove-SentinelOne -CallC -SiteToken $env:SITETOKEN
